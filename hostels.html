@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="dashboard-container">
-        <!-- Sidebar Navigation -->
+
         <aside class="sidebar">
             <div class="sidebar-header">
                 <h2>Student Portal</h2>
@@ -29,7 +29,6 @@
             </div>
         </aside>
 
-        <!-- Main Content Area -->
         <main class="main-content">
             <header class="dashboard-header">
                 <div class="user-info">
@@ -40,17 +39,14 @@
                 </div>
             </header>
 
-            <!-- Rooms Content -->
             <div class="hostels-content">
                 <h1>Available Rooms</h1>
                 
-                <!-- Room Search Bar -->
                 <div class="search-container">
                     <input type="text" id="roomSearch" placeholder="Enter room number (e.g., A02)" class="search-input">
                     <button id="searchBtn" class="btn btn-primary">Search</button>
                 </div>
 
-                <!-- Room Filters -->
                 <div class="filters">
                     <select id="roomTypeFilter">
                         <option value="all">All Room Types</option>
@@ -66,16 +62,13 @@
                     </select>
                 </div>
 
-                <!-- Rooms Grid -->
                 <div id="roomsGrid" class="rooms-grid">
-                    <!-- Room cards will be loaded here -->
                     <div class="loading-message">Loading rooms...</div>
                 </div>
             </div>
         </main>
     </div>
 
-    <!-- Room Details Modal -->
     <div id="roomDetailsModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
@@ -84,7 +77,6 @@
             </div>
             <div class="modal-body">
                 <div id="roomDetailsContent">
-                    <!-- Room details will be loaded here -->
                 </div>
             </div>
         </div>

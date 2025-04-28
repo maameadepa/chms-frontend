@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Notifications - Campus Hostel Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Information - Campus Hostel Management</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/dashboard.css">
 </head>
@@ -18,7 +19,7 @@
                     <li><a href="hostels.html">View Rooms</a></li>
                     <li><a href="applications.html">My Applications</a></li>
                     <li><a href="notifications.html">Notifications</a></li>
-                    <li class="active"><a href="profile.html">My Profile</a></li>
+                    <li><a href="profile.html">My Profile</a></li>
                 </ul>
             </nav>
             <div class="sidebar-footer">
@@ -31,15 +32,15 @@
                     <span id="userName">Loading...</span>
                 </div>
             </header>
-            <div class="notifications-content">
-                <h1>Notifications</h1>
-                <div id="notificationsList" class="notifications-list">
-                    <div class="loading-message">Loading notifications...</div>
+            <div class="room-info-content">
+                <h1>Room Information</h1>
+                <div id="roomInfoDetails">
+                    <p>Loading room information...</p>
                 </div>
             </div>
         </main>
     </div>
     <script src="js/auth.js"></script>
-    <script src="js/notifications.js"></script>
+    <script src="js/room-info.js"></script>
 </body>
 </html>

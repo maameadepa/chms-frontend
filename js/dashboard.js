@@ -1,5 +1,8 @@
 // API Configuration
-const API_URL = 'http://localhost:5000/api';
+if (typeof API_URL === 'undefined') {
+    const API_URL = 'http://localhost:5000/api';
+}
+
 
 // Load hostel preview on dashboard
 async function loadHostelPreview() {
@@ -66,6 +69,28 @@ async function loadRecentNotifications() {
     document.getElementById('recentNotifications').innerHTML = 
         '<p>No recent notifications</p>';
 }
+
+//Load assigned room
+async function loadAssignedRoom() {
+    const res = await fetch(`${API_URL}/applications/my-assigned-room`, { credentials: 'include' });
+    const room = await res.json();
+    const container = document.getElementById('assignedRoom');
+    if (!room) {
+        container.innerHTML = '<p>No room assigned yet.</p>';
+        return;
+    }
+    container.innerHTML = `
+        <div class="assigned-room-card">
+            <h3>Assigned Room: ${room.room_number}</h3>
+            <p><strong>Type:</strong> ${room.room_type}</p>
+            <p><strong>Price per Semester:</strong> $${room.price_per_semester}</p>
+            <p><strong>Description:</strong> ${room.description || '-'}</p>
+            <p><strong>Assigned On:</strong> ${new Date(room.created_at).toLocaleString()}</p>
+            <a href="room-info.html?roomId=${room.room_id}" class="btn btn-primary">View Full Details</a>
+        </div>
+    `;
+}
+document.addEventListener('DOMContentLoaded', loadAssignedRoom);
 
 // Initialize dashboard
 document.addEventListener('DOMContentLoaded', () => {
