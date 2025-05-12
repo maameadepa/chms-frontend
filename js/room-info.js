@@ -1,7 +1,6 @@
-// Ensure API_URL is defined
-if (typeof API_URL === 'undefined') {
-    var API_URL = 'https://chms-backend-aqow.onrender.com';
-}
+// API_URL
+const API_URL = window.API_URL 
+  || 'https://chms-backend-aqow.onrender.com';
 
 // Utility: Get roomId from URL
 function getRoomIdFromUrl() {
