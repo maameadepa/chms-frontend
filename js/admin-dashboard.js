@@ -1,4 +1,6 @@
-
+if (typeof API_URL === 'undefined') {
+    const API_URL = 'https://chms-backend-aqow.onrender.com';
+}
 // Check if user is admin
 async function checkAdminAccess() {
     try {
