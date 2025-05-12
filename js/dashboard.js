@@ -1,3 +1,7 @@
+// API Configuration
+if (typeof API_URL === 'undefined') {
+    const API_URL = 'https://chms-backend-aqow.onrender.com';
+}
 
 // Load hostel preview on dashboard
 async function loadHostelPreview() {
