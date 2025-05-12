@@ -1,7 +1,3 @@
-// frontend/js/auth.js
-
-// Base API URL
-const API_URL = 'https://chms-backend-aqow.onrender.com';
 
 document.addEventListener('DOMContentLoaded', () => {
   // ── Form containers
