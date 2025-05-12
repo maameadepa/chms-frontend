@@ -1,5 +1,7 @@
 // Base API URL
-const API_URL = 'https://chms-backend-aqow.onrender.com';
+if (typeof API_URL === 'undefined') {
+    const API_URL = 'https://chms-backend-aqow.onrender.com';
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   // ── Form containers
