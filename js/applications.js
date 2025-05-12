@@ -1,6 +1,3 @@
-if (typeof API_URL === 'undefined') {
-    const API_URL = 'https://chms-backend-aqow.onrender.com';
-}
 
 async function fetchApplications() {
     const res = await fetch(`${API_URL}/applications/my-applications`, { credentials: 'include' });
