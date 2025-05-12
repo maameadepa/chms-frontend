@@ -1,6 +1,5 @@
-if (typeof API_URL === 'undefined') {
-    const API_URL = 'https://chms-backend-aqow.onrender.com';
-}
+const API_URL = window.API_URL 
+  || 'https://chms-backend-aqow.onrender.com';
 
 async function fetchNotifications() {
     const res = await fetch(`${API_URL}/notifications`, { credentials: 'include' });
