@@ -1,6 +1,6 @@
-const API_URL = window.API_URL 
-  || 'https://chms-backend-aqow.onrender.com';
-
+if (typeof API_URL === 'undefined') {
+    const API_URL = 'https://chms-backend-aqow.onrender.com';
+}
 // Check admin access
 async function checkAdminAccess() {
     try {
