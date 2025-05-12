@@ -1,6 +1,3 @@
-// Use existing API_URL if it exists, otherwise declare it
-const ROOM_API_URL = window.API_URL || 'https://chms-backend-aqow.onrender.com';
-
 // Check admin access
 async function checkAdminAccess() {
     try {
